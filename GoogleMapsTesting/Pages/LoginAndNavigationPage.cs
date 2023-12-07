@@ -3,10 +3,10 @@ using GoogleMapsTesting.Pages;
 
 namespace GoogleMapsTesting.Pages
 {
-    internal class MenuNavigationPage : BasePage
+    internal class LoginAndNavigationPage : BasePage
     {
 
-        public MenuNavigationPage(IWebDriver driver) : base(driver)
+        public LoginAndNavigationPage(IWebDriver driver) : base(driver)
         {
         }
        

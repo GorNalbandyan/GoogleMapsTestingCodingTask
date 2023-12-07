@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
@@ -91,6 +92,11 @@ namespace GoogleMapsTesting.Pages
         {
             _wait.Timeout = TimeSpan.FromSeconds(timeout);
             _wait.Until(ExpectedConditions.InvisibilityOfElementLocated(by));
+        }
+
+        public void HoverOverElement(IWebElement eleToHover)
+        {
+            new Actions(_driver).MoveToElement(eleToHover).Build().Perform();
         }
     }
 }

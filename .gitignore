@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/GoogleMapsTesting/Tests/SmokeSuite/GMapsUISmokeVerifcation.feature.cs
+/GoogleMapsTesting/Tests/SmokeSuite/MapTypesSmokeVerification.feature.cs

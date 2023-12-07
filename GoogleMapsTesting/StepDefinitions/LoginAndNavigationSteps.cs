@@ -6,13 +6,13 @@ using TechTalk.SpecFlow;
 namespace GoogleMapsTesting.StepDefinitions
 {
     [Binding]
-    public class NavigationSteps : BaseSteps
+    public class LoginAndNavigationSteps : BaseSteps
     {
-        public NavigationSteps(IWebDriver driver, Logger logger) : base(driver, logger)
+        public LoginAndNavigationSteps(IWebDriver driver, Logger logger) : base(driver, logger)
         { 
         }
 
-        [Given(@"I am on Google Maps page")]
+        [Given(@"Google Maps page is open")]
         public void GivenIAmOnGoogleMapsPage()
         {
             _driver.Navigate().GoToUrl(new SettingsHelper().Url);
