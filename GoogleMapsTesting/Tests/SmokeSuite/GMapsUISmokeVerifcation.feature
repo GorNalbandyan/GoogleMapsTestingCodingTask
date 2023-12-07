@@ -1,6 +1,6 @@
 ﻿Feature: GMapsUISmokeVerifcation
 
-Test cases verift all main components of the first page are displayed.
+Test cases verifies all main components of the first page are displayed.
 
 Scenario Outline: Smoke Validation of Main Components
 	Given Google Maps page is open
