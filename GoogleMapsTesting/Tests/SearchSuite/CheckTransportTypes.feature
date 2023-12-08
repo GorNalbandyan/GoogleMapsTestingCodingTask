@@ -1,6 +1,7 @@
 ﻿Feature: CheckTransportTypes
 
-A short summary of the feature
+Test case verifies that transport types are available 
+with required attributes
 
 Scenario: CheckTransportTypes
 	Given Google Maps page is open
