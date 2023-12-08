@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools.V117.Debugger;
+using OpenQA.Selenium.Edge;
 
 namespace GoogleMapsTesting.Helpers
 {
@@ -35,6 +37,19 @@ namespace GoogleMapsTesting.Helpers
             return new ChromeDriver(chromeDriverService, chromeOptions, _timeout);
         }
 
+        private EdgeDriver EdgeBrowser()
+        {
+            EdgeOptions edgeOptions = new EdgeOptions()
+            {
+                LeaveBrowserRunning = false
+            };
+            string edgeDriverPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Path.Combine("drivers", "msedgedriver.exe"));
+            System.Environment.SetEnvironmentVariable("webdriver.edge.driver", edgeDriverPath);
+            EdgeDriverService edgeDriverService = EdgeDriverService.CreateDefaultService(_location);
+            edgeDriverService.LogPath = Path.Combine(_logger.FilePath, "edgedriver.log");
+            return new EdgeDriver(edgeDriverService, edgeOptions, _timeout);
+        }
+
         public IWebDriver LoadBrowser(BrowserType browser)
         {
             IWebDriver? driver = null;
@@ -42,6 +57,9 @@ namespace GoogleMapsTesting.Helpers
             {
                 case BrowserType.Chrome:
                     driver = ChromeBrowser();
+                    break;
+                case BrowserType.Edge:
+                    driver = EdgeBrowser();
                     break;
                 //here should be the implementation of other types of browsers
             }
