@@ -16,6 +16,7 @@ namespace GoogleMapsTesting.StepDefinitions
         public void GivenIAmOnGoogleMapsPage()
         {
             _driver.Navigate().GoToUrl(new SettingsHelper().Url);
+            _logger.Info("Google Maps page is open");
         }
     }
 }
