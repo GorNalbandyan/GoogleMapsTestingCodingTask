@@ -3,6 +3,7 @@
 	<TestRunParameters>
 		<Parameter name = "Browser" value = "Chrome"/>
 		<Parameter name = "Url" value = "https://www.google.com/maps/?hl=en"/>
+		<Parameter name = "GoogleAPIKey" value = "Here should be you Google API Key"/>
 	</TestRunParameters>
 
 </RunSettings>
