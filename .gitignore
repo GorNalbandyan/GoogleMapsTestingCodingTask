@@ -363,3 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /GoogleMapsTesting/Tests/SmokeSuite/GMapsUISmokeVerifcation.feature.cs
 /GoogleMapsTesting/Tests/SmokeSuite/MapTypesSmokeVerification.feature.cs
+/GoogleMapsTesting/Tests/SearchSuite/CheckTransportTypes.feature.cs
+/GoogleMapsTesting/Tests/SearchSuite/SearchRouteDirections.feature.cs
+/GoogleMapsTesting/Tests/SearchSuite/SearchSingleAddress.feature.cs
