@@ -3,10 +3,11 @@ using static GoogleMapsTesting.Helpers.BrowserHelper;
 
 namespace GoogleMapsTesting.Helpers
 {
-    internal class SettingsHelper
+    public sealed class SettingsHelper
     {
         public BrowserType Browser { get; set; }
         public string Url { get; set; }
+        public string GoogleAPIKey { get; set; }    
        
         public SettingsHelper()
         {
@@ -14,6 +15,7 @@ namespace GoogleMapsTesting.Helpers
             _ = Enum.TryParse(browserName, out BrowserType browser);
             Browser = browser;
             Url = GetSettings("Url");
+            GoogleAPIKey = GetSettings("GoogleAPIKey");
         }
 
         public static string? GetSettings(string settingName)

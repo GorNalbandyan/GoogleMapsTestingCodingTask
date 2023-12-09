@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
 	<TestRunParameters>
-		<Parameter name = "Browser" value = "Chrome"/>
+		<Parameter name = "Browser" value = "Edge"/>
 		<Parameter name = "Url" value = "https://www.google.com/maps/?hl=en"/>
 		<Parameter name = "GoogleAPIKey" value = "Here should be you Google API Key"/>
 	</TestRunParameters>
