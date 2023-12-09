@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools.V117.Debugger;
 using OpenQA.Selenium.Edge;
 
 namespace GoogleMapsTesting.Helpers
