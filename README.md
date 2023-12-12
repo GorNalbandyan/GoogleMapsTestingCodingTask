@@ -37,6 +37,8 @@ Adhering to the Page Object Model design pattern, the Pages section incorporates
 The BasePage class is introduced to streamline Selenium actions, enhancing efficiency and reducing development time for command additions.
 Every page class inherits from BasePage, ensuring standardized waiting mechanisms and driver initialization are incorporated.
 
+![BasePage](https://github.com/GorNalbandyan/GoogleMapsTestingCodingTaskForWooga/assets/61111839/e479e20f-4375-4d24-b6db-67d7ac709058)
+
 ### GMapAPITesting
 GMapAPITesting has been developed to facilitate API-level testing. API test cases operate at a faster pace and a more granular level, enabling us to promptly receive feedback and detect issues in the early stages of development.
 The framework is built upon the gmaps-api-net NuGet package (https://github.com/ericnewton76/gmaps-api-net) and adheres to its documentation. You'll discover foundational implementations of its methods designed specifically for testing purposes. While these implementations may not be functional due to the requirement for a Google Maps API Key, they provide a valuable structural foundation. Additionally, the framework exclusively utilizes NUnit, adding to its interest and simplicity.
@@ -66,6 +68,9 @@ To execute the test cases locally follow the steps outlined below. Ensure that y
 - Search for "SpecFlow" in the search bar.
 - Locate and install the "SpecFlow for Visual Studio" extension.
 
+  ![image](https://github.com/GorNalbandyan/GoogleMapsTestingCodingTaskForWooga/assets/61111839/6bc7e830-8d3a-4267-9d1c-5622c1d5beaf)
+
+
 ## Running Tests
 
 ### Build the Solution:
@@ -81,6 +86,8 @@ Before executing the tests, ensure you select the appropriate .runsettings file 
 - Choose "Select Test Settings" and then "Select Test Settings File."
 -Browse to the location of the relevant .runsettings file and select it.
 
+![image](https://github.com/GorNalbandyan/GoogleMapsTestingCodingTaskForWooga/assets/61111839/dcfdfec2-8f1c-4f9f-8b69-a32b91eae5ed)
+
 ***This step is essential for configuring the testing environment accurately, and it ensures that tests run with the specified settings and configurations.***
 
 ### Execute Tests:
@@ -88,5 +95,8 @@ Open the "Test Explorer" Window:
 - In Visual Studio, go to the "View" menu, select "Test Explorer" to open the Test Explorer window.
 - The Test Explorer displays all available tests within the solution.
 - Click "Run All Tests"
-- In the Test Explorer window, click the "Run All Tests" button to initiate the execution of all tests in the solution. Or roght click on a given test case and click run.
+- In the Test Explorer window, click the "Run All Tests" button to initiate the execution of all tests in the solution. Or make right-click on a given test case and click run.
+
+![image](https://github.com/GorNalbandyan/GoogleMapsTestingCodingTaskForWooga/assets/61111839/3b2c0301-95c3-4713-a612-594b9442b28c)
+
 
