@@ -1,11 +1,9 @@
 using GoogleMapsTesting.Helpers;
-using GoogleMapsTesting.Interfaces;
 using GoogleMapsTesting.Pages;
 using GoogleMapsTesting.Pages.TransportTypePages;
 using GoogleMapsTesting.Steps;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using System.Linq;
 using TechTalk.SpecFlow;
 using static GoogleMapsTesting.Models.TransportTypes;
 
