@@ -34,3 +34,4 @@ jobs:
       with:
         name: test-results
         path: '**/TestResults'
+        continue-on-error: true
