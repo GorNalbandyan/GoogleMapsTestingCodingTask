@@ -27,18 +27,37 @@ namespace GoogleMapsTesting.Helpers
             objectContainer.RegisterInstanceAs<Logger>(logger);
             objectContainer.RegisterInstanceAs<IWebDriver>(webDriver);
             objectContainer.Resolve<SettingsHelper>();
+
+            foreach (var file in Directory.GetFiles(logger.FilePath))
+            {
+                if (file.ToLower().Contains("screenshot") || file.ToLower().Contains("scenario.log"))
+                {
+                    File.Delete(file);
+                }
+
+            }
         }
 
         [AfterScenario]
-        public void AfterScenario()
+        public void AfterScenario(ScenarioContext scenarioContext)
         {
             Logger logger = objectContainer.Resolve<Logger>();
             IWebDriver webDriver = objectContainer.Resolve<IWebDriver>();
+            if (scenarioContext.ScenarioExecutionStatus == ScenarioExecutionStatus.TestError)
+            {
+                logger.LogWrite($"{TestContext.CurrentContext.Test.Name} test failed with {scenarioContext.TestError.Message} {scenarioContext.TestError.InnerException}");
+            }
             var screenshot = Path.Combine(logger.FilePath, "Screenshot.png");
             Screenshot testScreenShot = ((ITakesScreenshot)webDriver).GetScreenshot();
             testScreenShot.SaveAsFile(screenshot, ScreenshotImageFormat.Png);
             foreach (var file in Directory.GetFiles(logger.FilePath))
-            webDriver.Dispose();
+            {
+                if (file.ToLower().Contains("screenshot") || file.ToLower().Contains("log"))
+                {
+                    TestContext.AddTestAttachment(file);
+                }
+
+            }
             webDriver.Quit();
         }
     }
