@@ -27,4 +27,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Run tests with .runsettings file
-      run: dotnet test --configuration Release --settings .runsettings
+      run: dotnet test --configuration Release --settings Chrome.runsettings
