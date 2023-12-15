@@ -18,6 +18,11 @@ jobs:
     - uses: actions/checkout@v3
     - name: Create TestResults folder
       run: mkdir -p TestResults
+    - name: Debugging tetsResults File
+      run: |
+       echo "Contents of the directory:"
+       ls -R 'D:/a/GoogleMapsTestingCodingTaskForWooga/GoogleMapsTestingCodingTaskForWooga'
+
     - name: Copy .runsettings file
       run: cp GoogleMapsTesting/Chrome.runsettings
     - name: Setup .NET
