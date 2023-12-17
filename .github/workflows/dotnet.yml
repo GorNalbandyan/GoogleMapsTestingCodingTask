@@ -17,14 +17,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Create TestResults folder
-      run: mkdir -p TestResults
+      run: New-Item -ItemType Directory -Path TestResults
     - name: Debugging tetsResults File
       run: |
        echo "Contents of the directory:"
        ls -R 'D:/a/GoogleMapsTestingCodingTaskForWooga/GoogleMapsTestingCodingTaskForWooga'
 
     - name: Copy .runsettings file
-      run: cp GoogleMapsTesting/Chrome.runsettings
+      run: Copy-Item -Path GoogleMapsTesting/Chrome.runsettings -Destination .
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -34,7 +34,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Run tests with .runsettings file
-      run: dotnet test --configuration Release --settings Chrome.runsettings
+      run: dotnet test --configuration Release --settings Chrome.runsettings --no-build
       continue-on-error: true
 
     - name: Upload test results
