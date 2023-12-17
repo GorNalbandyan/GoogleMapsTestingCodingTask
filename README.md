@@ -99,4 +99,24 @@ Open the "Test Explorer" Window:
 
 ![image](https://github.com/GorNalbandyan/GoogleMapsTestingCodingTaskForWooga/assets/61111839/3b2c0301-95c3-4713-a612-594b9442b28c)
 
+## Continuous Integration (CI)
+
+We have set up a Continuous Integration (CI) workflow to ensure that the project builds successfully and that tests are run automatically. The CI workflow is named `GoogleMapsE2e_Chrome`.
+
+![image](https://github.com/GorNalbandyan/GoogleMapsTestingCodingTaskForWooga/assets/61111839/5494a87d-6e3f-4e95-a429-495c08f7b6a8)
+
+### Workflow Details
+
+- **Workflow Name:** GoogleMapsE2E_Chrome
+- **Supported Browsers:** Chrome (For Edge, a separate workflow needs to be created)
+- **Build and Test:**
+  - The workflow includes steps to build the project.
+  - It runs the test cases to ensure that the application functions correctly.
+  - The tests are configured to run on the Chrome browser.
+
+### How to Run
+
+ **Chrome Workflow:**
+   - The CI workflow for Chrome is automatically triggered on every push to the repository.
+   - The workflow can also be manually triggered if needed.
 
