@@ -30,7 +30,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Run tests with .runsettings file
-      run: dotnet test --configuration Release --settings Chrome.runsettings --result=TestResults.xml
+      run: dotnet test --configuration Release --settings Chrome.runsettings
       continue-on-error: true
 
     - name: Print Current Directory
@@ -40,7 +40,10 @@ jobs:
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with:
-        name: test-results
+        name: TestResults
         path: 'D:/a/GoogleMapsTestingCodingTaskForWooga/GoogleMapsTestingCodingTaskForWooga/TestResults'
-    - name: Debugging Entire Repository
-      run: ls -R
+
+    - name: List SpecFlow Output
+      run: |
+        echo "Contents of the _output directory:"
+          ls -R '_output'
